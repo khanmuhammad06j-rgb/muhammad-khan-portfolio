@@ -5,6 +5,8 @@ const BADGE = {
   FIXED: 'border-warn/40 bg-warn/10 text-warn',
   FAIL: 'border-red-500/40 bg-red-500/10 text-red-400',
   HIGH: 'border-red-500/40 bg-red-500/10 text-red-500 dark:text-red-400',
+  CONFIRMED: 'border-signal/40 bg-signal/10 text-signal',
+  MISLABELED: 'border-warn/40 bg-warn/10 text-warn',
   MED: 'border-warn/40 bg-warn/10 text-warn',
   LOW: 'border-signal/40 bg-signal/10 text-signal',
 };
@@ -51,8 +53,8 @@ function List({ b }) {
 function ImageBlock({ b }) {
   return (
     <figure className="panel overflow-hidden">
-      <div className="bg-white p-3 md:p-6">
-        <img src={b.src} alt={b.alt} width={b.width} height={b.height} loading="lazy" className="mx-auto h-auto w-full max-w-3xl" />
+      <div className={b.bg === 'dark' ? 'bg-black p-2 md:p-3' : 'bg-white p-3 md:p-6'}>
+        <img src={b.src} alt={b.alt} width={b.width} height={b.height} loading="lazy" className={`mx-auto h-auto w-full ${b.bg === 'dark' ? 'max-w-5xl' : 'max-w-3xl'}`} />
       </div>
       {b.caption && <figcaption className="border-t border-line px-5 py-4 text-sm text-muted">{b.caption}</figcaption>}
     </figure>

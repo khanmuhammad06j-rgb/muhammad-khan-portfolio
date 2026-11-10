@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
   const cs = getCaseStudy(slug);
   if (!cs) return {};
   return {
-    title: `${cs.title} — ${profile.name}`,
+    title: `${cs.title} | ${profile.name}`,
     description: cs.summary,
   };
 }
@@ -27,7 +27,7 @@ export default async function CaseStudyPage({ params }) {
   const cs = getCaseStudy(slug);
   if (!cs) notFound();
 
-  const backHref = cs.kind === 'lab' ? '/#labs' : '/#work';
+  const backHref = cs.kind === 'case-study' ? '/#work' : '/#matrix';
 
   return (
     <>
@@ -35,7 +35,7 @@ export default async function CaseStudyPage({ params }) {
       <main className="mx-auto max-w-page px-5 pb-10 pt-28 md:px-8 md:pt-36">
         <a href={backHref} className="group inline-flex items-center gap-2 font-mono text-xs text-muted transition-colors hover:text-accent">
           <ArrowRight width={14} height={14} className="rotate-180 transition-transform group-hover:-translate-x-0.5" />
-          {cs.kind === 'lab' ? 'All labs' : 'All work'}
+          {cs.kind === 'case-study' ? 'All work' : 'All projects'}
         </a>
 
         <header className="mt-8 animate-rise">

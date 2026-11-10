@@ -1,5 +1,5 @@
 // Single source of truth for all site content.
-// Edit this file to update the portfolio — components read from it.
+// Edit this file to update the portfolio; components read from it.
 
 export const profile = {
   name: 'Muhammad Khan',
@@ -10,7 +10,7 @@ export const profile = {
   role: 'Network Deployment · Cloud Infrastructure',
   tagline: 'I build the physical layer the cloud runs on.',
   intro:
-    'Network deployment technician (via TEKsystems) on hyperscale cloud data center builds. I install, cable and validate high-density network fabric — optics, fiber trunks, out-of-band management — and hand it to operations ready for production traffic.',
+    'Network deployment technician (via TEKsystems) on hyperscale cloud data center builds. I install, cable and validate high-density network fabric (optics, fiber trunks, out-of-band management) and hand it to operations ready for production traffic.',
   location: 'Lorton, VA · Washington DC–Baltimore',
   availability: 'Open to cloud & network infrastructure roles',
   // Stored in two parts and joined in the browser so simple spam scrapers can't harvest it from the HTML.
@@ -34,10 +34,10 @@ export const metrics = [
   { value: '3.77', label: 'GPA, A.S. Information Technology' },
 ];
 
-// Results ledger — every number comes from my own work, never from the client's operations.
+// Results ledger: every number comes from my own work, never from the client's operations.
 // kind controls the mini-visual: uptime | checks | gauge | nights | certs | plain
 export const results = [
-  { kind: 'uptime', value: '99.9%', label: 'Storefront uptime while running the full Shopify and analytics stack solo — including root-causing a critical plugin conflict.', source: 'Ummroayyaar Jewelry', span: 2 },
+  { kind: 'uptime', value: '99.9%', label: 'Storefront uptime while running the full Shopify and analytics stack solo, including root-causing a critical plugin conflict.', source: 'Ummroayyaar Jewelry', span: 2 },
   { kind: 'checks', value: '12/12', total: 12, fixed: 1, label: 'Capstone validation checks passing at handoff. One defect caught in testing and fixed before sign-off.', source: 'NetNova capstone' },
   { kind: 'gauge', value: '69%', pct: 69, label: 'Power headroom built into the rack budget: ~550 W on an 1,800 W circuit.', source: 'NetNova capstone' },
   { kind: 'nights', value: '500+', nights: 30, label: 'Attendees a night for 30 straight nights, with 100% safety and occupancy compliance and audit-ready logs.', source: 'Adams Center', span: 2 },
@@ -47,12 +47,15 @@ export const results = [
   { kind: 'plain', value: '~15%', label: 'Fewer service errors (estimated) after I came back as senior crew to train new hires.', source: 'The Halal Guys' },
   { kind: 'plain', value: '200+', label: 'Hours of hands-on data center training: Cisco, ESXi, Linux, Windows and structured cabling.', source: 'Per Scholas × TEKsystems' },
   { kind: 'certs', value: '5', earned: 5, progress: 1, label: 'Certifications earned, with AWS Solutions Architect – Associate in progress.', source: 'Credentials' },
+  { kind: 'plain', value: '15/15', label: 'Splunk CTF challenges solved, ending in a malware upload traced to the attacker’s IP, accounts and file.', source: 'CodePath CYB102', span: 2 },
+  { kind: 'plain', value: '9', label: 'Machines found talking to SolarWinds and Scattered Spider infrastructure in a Splunk threat hunt.', source: 'CodePath CYB102' },
+  { kind: 'plain', value: '1', label: 'Mislabeled “malicious” IP caught by checking an incident report against threat intel.', source: 'CodePath CYB102' },
 ];
 
 export const about = {
   paragraphs: [
     'Most people meet the cloud as a console. I meet it as cold aisles, fiber trays and a runbook. My job is the step between an engineering design and a live region: making sure every transceiver seats, every link comes up clean, and every rack reaches operations documented and ready.',
-    'I came into IT through the Per Scholas × TEKsystems Data Center program, where I led a seven-person team through a full enterprise network build. Since then I have moved straight onto production hyperscale data center floors, completed CodePath’s Intermediate Cybersecurity program, and kept going on an A.S. in IT — with AWS Solutions Architect – Associate next.',
+    'I came into IT through the Per Scholas × TEKsystems Data Center program, where I led a seven-person team through a full enterprise network build. Since then I have moved straight onto production hyperscale data center floors, completed CodePath’s Intermediate Cybersecurity program, and kept going on an A.S. in IT. Next up: AWS Solutions Architect Associate.',
     'What I bring: speed without shortcuts, calm troubleshooting on live equipment, and trackers that other people can actually rely on.',
   ],
   facts: [
@@ -106,9 +109,9 @@ export const projects = [
     id: '03',
     category: 'Leadership',
     eyebrow: 'Per Scholas × TEKsystems capstone · May 2026',
-    title: 'NetNova data center build — project lead',
+    title: 'NetNova data center build: project lead',
     summary:
-      'Led a seven-person team that took a scenario client from an empty rack quarter to a segmented, hardened and fully validated network on real Cisco and Dell hardware — designed first in Packet Tracer, delivered in seven days.',
+      'Led a seven-person team that took a scenario client from an empty rack quarter to a segmented, hardened and fully validated network on real Cisco and Dell hardware. Designed first in Packet Tracer, delivered in seven days.',
     context: 'A rack shared by four teams, a fixed seven-day plan, and a client-style handoff with full documentation.',
     actions: [
       'Planned the seven-day build and assigned network, systems, cabling, security, docs and QA roles',
@@ -130,8 +133,8 @@ export const projects = [
 export const flagship = {
   caseStudy: 'netnova-data-center-capstone',
   tag: 'Capstone · Project lead',
-  environment: 'Hardware: Cisco ISR · ASA · Catalyst · Dell R630 — real gear, 7-day build',
-  title: 'NetNova — Enterprise Data Center Build',
+  environment: 'Hardware: Cisco ISR · ASA · Catalyst · Dell R630 · real gear, 7-day build',
+  title: 'NetNova: Enterprise Data Center Build',
   sequence: ['Plan & power budget', 'Rack & cable', 'VLANs & routing', 'ESXi + Server 2019', 'Harden', 'Validate', 'Handoff'],
 };
 
@@ -139,7 +142,7 @@ export const experience = [
   {
     role: 'Network Deployment Technician (Contract)',
     org: 'TEKsystems · hyperscale cloud data center',
-    dates: 'Jun 2026 — Present',
+    dates: 'Jun 2026 to Present',
     place: 'Washington DC–Baltimore',
     current: true,
     points: [
@@ -153,7 +156,7 @@ export const experience = [
   {
     role: 'Founder',
     org: 'Ummroayyaar Jewelry',
-    dates: 'Apr 2025 — Jul 2026',
+    dates: 'Apr 2025 to Jul 2026',
     place: 'Virginia',
     points: [
       'Ran the full Shopify + Google Analytics stack solo and kept the storefront at 99.9% uptime.',
@@ -164,7 +167,7 @@ export const experience = [
   {
     role: 'Operations Support (Contract)',
     org: 'Adams Center',
-    dates: 'Feb 2026 — Mar 2026',
+    dates: 'Feb to Mar 2026',
     place: 'Sterling, VA',
     points: [
       'Controlled access and crowd flow for 500+ attendees a night across 30 consecutive nights with minimal incidents.',
@@ -174,7 +177,7 @@ export const experience = [
   {
     role: 'Substitute Instructional Assistant',
     org: 'Fairfax County Public Schools',
-    dates: 'Aug 2023 — Present',
+    dates: 'Aug 2023 to Present',
     place: 'Fairfax County, VA',
     points: [
       'The go-to for classroom tech: resolve 15+ authentication, platform and Wi-Fi issues weekly via Google Admin Console and Schoology for 30+ daily users.',
@@ -184,7 +187,7 @@ export const experience = [
 ];
 
 export const earlier =
-  'Earlier: Verizon Fios field sales (CRM, territory lead) and The Halal Guys, where I returned as senior crew to train new hires — an estimated 15% drop in service errors.';
+  'Earlier: Verizon Fios field sales (CRM, territory lead) and The Halal Guys, where I returned as senior crew to train new hires, for an estimated 15% drop in service errors.';
 
 export const skills = [
   {
@@ -195,7 +198,7 @@ export const skills = [
   },
   {
     layer: 'L2–L4',
-    note: 'Segmentation, routing and reachability — designed in Packet Tracer, proven on real Cisco gear.',
+    note: 'Segmentation, routing and reachability, designed in Packet Tracer, proven on real Cisco gear.',
     name: 'Network',
     items: ['Spine/leaf fabric', 'TCP/IP', 'VLANs', 'Inter-VLAN routing', 'Cisco IOS', 'DNS · DHCP', 'SSH', 'Link troubleshooting', 'Cisco Packet Tracer'],
   },
@@ -213,7 +216,7 @@ export const skills = [
   },
   {
     layer: 'OPS',
-    note: 'Runbooks, tickets and trackers other people can rely on — the difference between a build and a handoff.',
+    note: 'Runbooks, tickets and trackers other people can rely on. That’s the difference between a build and a handoff.',
     name: 'Operations',
     items: ['Runbook execution', 'Change control', 'Incident management', 'Root cause analysis', 'ServiceNow', 'Freshdesk', 'Escalation', 'Excel trackers', 'Vendor coordination', 'Documentation'],
   },
@@ -221,7 +224,7 @@ export const skills = [
     layer: 'SEC',
     note: 'Harden in small steps and test each one: SSH-only, port security, ACLs, least privilege.',
     name: 'Security',
-    items: ['Security hardening', 'Access control', 'CodePath Intermediate Cybersecurity', 'Incident response basics'],
+    items: ['Splunk (SPL)', 'Wireshark', 'Threat hunting', 'IOC validation', 'Incident response', 'Cisco Catalyst', 'VirusTotal · AbuseIPDB', 'Linux auditd', 'nginx DoS hardening', 'Web app security', 'Security hardening'],
   },
 ];
 
@@ -233,16 +236,16 @@ export const education = [
     dates: 'Expected Aug 2027',
   },
   {
-    title: 'Data Center Program — 200+ hours',
+    title: 'Data Center Program (200+ hours)',
     org: 'Per Scholas × TEKsystems',
     detail: 'Cisco IOS, ESXi, Linux & Windows admin, cabling & topology',
-    dates: 'Apr — May 2026',
+    dates: 'Apr to May 2026',
   },
   {
     title: 'Intermediate Cybersecurity',
     org: 'CodePath',
-    detail: 'Threats, defenses and hands-on security labs',
-    dates: 'Jun — Aug 2026',
+    detail: '8 hands-on projects: Splunk, Wireshark, auditd, nginx, incident response',
+    dates: 'Jun to Aug 2026',
   },
 ];
 

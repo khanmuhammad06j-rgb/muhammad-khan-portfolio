@@ -3,11 +3,11 @@ import './globals.css';
 import { profile } from '@/data/profile';
 
 export const metadata = {
-  title: `${profile.name} — Network Deployment & Cloud Infrastructure`,
+  title: `${profile.name} | Network Deployment & Cloud Infrastructure`,
   description:
     'Network deployment technician on hyperscale cloud data center builds. Spine/leaf fabric, optics validation, out-of-band recovery and clean operational handoffs.',
   openGraph: {
-    title: `${profile.name} — ${profile.tagline}`,
+    title: `${profile.name} | ${profile.tagline}`,
     description: profile.intro,
     type: 'website',
   },

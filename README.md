@@ -6,15 +6,15 @@ Personal portfolio for **Muhammad Khan**, network deployment technician (via TEK
 
 ## Overview
 
-Bold black-and-red design: a giant outlined "PORTFOLIO" behind the hero, a floating pill nav, a red-framed duotone portrait that turns full color on hover, a Flagship case study, a filterable Systems Matrix, and a clickable Layer Stack of skills from L1 up.
+Bold black-and-red design: a circular "Portrait in Dots" hero (about 16,700 crimson halftone dots that follow the cursor in 3D and open into the real photo as you scroll), a floating pill nav, a Flagship case study, a filterable Systems Matrix with security projects, a Results Ledger and a clickable Layer Stack of skills.
 
 **Sections**
 
 | Section | What it shows |
 | --- | --- |
-| Hero | "Hello, I'm" intro, portrait frame, three numbered highlight cards, five headline metrics |
+| Hero | "Hello, I'm" intro, the dot portrait (scroll to reveal the photo), three highlight cards, five headline metrics |
 | Flagship | The NetNova capstone with stats, build sequence and a link to the full case study |
-| Systems Matrix | All projects and Packet Tracer labs as cards, with category filters |
+| Systems Matrix | Production, leadership and 8 CodePath security projects (each with its own page), with category filters |
 | Results Ledger | Ten NDA-safe results with count-up numbers and mini visuals (uptime bars, check grid, power gauge) |
 | About | Short narrative plus a "running-config" quick-facts panel |
 | Experience | Timeline, with the current deployment role highlighted |
@@ -30,11 +30,6 @@ Bold black-and-red design: a giant outlined "PORTFOLIO" behind the hero, a float
 - Subtle motion: fiber-link animation, reveal-on-scroll, hover lift on cards; all turned off when the visitor's system prefers reduced motion
 - Self-hosted Archivo, Space Mono and Caveat fonts via npm, so no external font requests and no environment variables
 - Statically prerendered home page
-
-## Two ways this site runs
-
-- **`index.html` (repository root):** a self-contained build of the whole site (photo, fonts and case study included) served by GitHub Pages. It carries its own Content Security Policy, so no outside code can run.
-- **The Next.js project:** the full source, with per-request security headers. Run it locally (below) or on any Node.js host.
 
 ## Local setup
 
@@ -68,7 +63,7 @@ npm start
 │   ├── Nav.js             # Sticky nav + mobile menu
 │   ├── ThemeToggle.js     # Dark/light switch
 │   ├── Hero.js            # Outlined title, intro, cards, metrics strip
-│   ├── Portrait.js        # Red duotone portrait frame (color on hover)
+│   ├── DotHero.js         # Dot portrait (loads lib/dotEngine.js)
 │   ├── Results.js         # Results Ledger
 │   ├── CountUp.js         # Animated numbers
 │   ├── Flagship.js        # Featured case study
@@ -88,6 +83,7 @@ npm start
 │   └── caseStudies.js     # Case study + lab pages
 ├── public/
 │   └── projects/<slug>/   # Images and .pkt files for each project
+├── lib/dotEngine.js       # Three.js dot renderer (+ 2D fallback, photo fallback)
 ├── middleware.js          # Per-request Content Security Policy (nonce)
 ├── next.config.js         # Security headers
 ├── tailwind.config.js
@@ -127,3 +123,7 @@ The site has no forms, database, login, API routes or environment variables, so 
 - **Responsible disclosure**: `/.well-known/security.txt`.
 
 DDoS protection and TLS certificates come from wherever the site is hosted.
+
+## The dot portrait
+
+`public/hero/dots.bin` holds the dots (position, surface normal, brightness, size class) generated from `public/hero/photo.webp` with AI depth estimation and a person cut-out. `lib/dotEngine.js` draws them with Three.js. If WebGL is unavailable or fails its self-check, it switches to a Canvas 2D halftone; if that fails, the plain photo shows. Without JavaScript the photo shows too.

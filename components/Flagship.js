@@ -15,7 +15,7 @@ export default function Flagship() {
         index="01"
         label="Field showcase"
         title="Flagship Deployment"
-        kicker="The build I can show end to end — every diagram, test and fix documented."
+        kicker="The build I can show end to end, with every diagram, test and fix documented."
       />
 
       <Reveal className="panel relative overflow-hidden p-6 md:p-10">

@@ -1,22 +1,21 @@
 import { heroCards, metrics, profile } from '@/data/profile';
-import Portrait from './Portrait';
+import DotHero from './DotHero';
 import { ArrowRight, LinkedIn, Pin } from './Icons';
 
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden pt-24 md:pt-28">
-      {/* giant outlined word */}
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-14 select-none text-center md:top-12">
-        <span className="outline-text font-display text-[15.5vw] font-black uppercase leading-none tracking-[-0.04em]">
-          Portfolio
-        </span>
+      {/* giant word behind the portrait: grey fading down; turns crimson as the reveal band passes */}
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-[88px] select-none md:top-[96px]">
+        <div id="dh-banner" className="dh-banner">Portfolio</div>
+        <div id="dh-banner-hot" className="dh-banner dh-banner-hot">Portfolio</div>
       </div>
 
-      <div className="relative mx-auto grid max-w-page gap-12 px-5 pt-[12vw] md:px-8 md:pt-[10vw] lg:grid-cols-[1.1fr_auto_1fr] lg:items-start lg:gap-10">
+      <div className="relative mx-auto grid max-w-page gap-12 px-5 pt-[12vw] md:px-8 md:pt-[9vw] lg:grid-cols-[minmax(0,1fr)_auto_minmax(250px,0.78fr)] lg:items-center lg:gap-8 lg:pt-[7vw]">
         {/* left: intro */}
-        <div className="animate-rise lg:pt-6">
+        <div className="relative z-10 animate-rise">
           <p className="font-script text-4xl text-fg md:text-5xl">Hello, I’m</p>
-          <h1 className="mt-1 inline-block bg-accent px-4 pb-1 pt-2 font-display text-[2.6rem] font-black uppercase leading-none tracking-[-0.03em] text-white shadow-[6px_6px_0_rgb(var(--fg)/0.9)] sm:text-5xl md:text-6xl">
+          <h1 className="mt-1 inline-block bg-accent px-4 pb-1 pt-2 font-display text-[2.6rem] font-black uppercase leading-none tracking-[-0.03em] text-white shadow-[6px_6px_0_rgb(var(--fg)/0.9)] sm:text-5xl md:text-6xl lg:text-[2.6rem] xl:text-[3rem]">
             {profile.firstName}.
           </h1>
           <div className="mt-6">
@@ -24,13 +23,11 @@ export default function Hero() {
               <span className="h-1.5 w-1.5 bg-accent" /> Network deployment & cloud infrastructure
             </span>
           </div>
-
           <p className="mt-6 max-w-md text-[17px] leading-relaxed text-muted">
-            I build <strong className="font-semibold text-fg">the physical layer the cloud runs on</strong> — installing, cabling
+            I build <strong className="font-semibold text-fg">the physical layer the cloud runs on</strong>: installing, cabling
             and validating <strong className="font-semibold text-fg">high-density network fabric</strong> on hyperscale data
             center floors, and handing it to operations ready for production traffic.
           </p>
-
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a href="#contact" className="btn-primary">
               Initiate contact <ArrowRight width={15} height={15} />
@@ -48,19 +45,18 @@ export default function Hero() {
               <LinkedIn />
             </a>
           </div>
-
           <p className="mt-6 flex items-center gap-1.5 font-mono text-[11px] text-muted">
             <Pin width={13} height={13} /> {profile.location}
           </p>
         </div>
 
-        {/* center: portrait */}
-        <div className="animate-rise [animation-delay:120ms] lg:w-[300px] lg:pt-2">
-          <Portrait />
+        {/* centre: dot portrait */}
+        <div className="relative z-10 animate-rise [animation-delay:120ms]">
+          <DotHero />
         </div>
 
         {/* right: numbered cards */}
-        <div className="grid gap-3 animate-rise [animation-delay:220ms] lg:pt-6">
+        <div className="relative z-10 grid gap-3 animate-rise [animation-delay:220ms]">
           {heroCards.map((c) => (
             <a
               key={c.id}
@@ -80,7 +76,7 @@ export default function Hero() {
       </div>
 
       {/* metrics */}
-      <div className="relative mx-auto mt-16 max-w-page px-5 md:mt-20 md:px-8">
+      <div className="relative mx-auto mt-14 max-w-page px-5 md:mt-16 md:px-8">
         <dl className="grid grid-cols-2 gap-3 md:grid-cols-5">
           {metrics.map((m, i) => (
             <div

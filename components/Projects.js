@@ -3,13 +3,22 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { projects } from '@/data/profile';
-import { labs } from '@/data/caseStudies';
+import { labs, securityProjects } from '@/data/caseStudies';
 import SectionHeading from './SectionHeading';
 import { ArrowUpRight } from './Icons';
 
 // Projects from profile.js plus any Packet Tracer labs from caseStudies.js
 const items = [
   ...projects,
+  ...securityProjects.map((l) => ({
+    id: l.slug,
+    category: 'Security',
+    title: l.title,
+    summary: l.summary,
+    tags: l.tools || [],
+    outcomes: (l.stats || []).slice(0, 3),
+    caseStudy: l.slug,
+  })),
   ...labs.map((l) => ({
     id: l.slug,
     category: 'Labs',
@@ -97,7 +106,7 @@ export default function Projects() {
         index="02"
         label="Engineering index"
         title="The Systems Matrix"
-        kicker="Production work, leadership and labs — filter by type."
+        kicker="Production work, leadership, and hands-on security projects. Filter by type."
       />
 
       <div className="-mt-4 mb-8 flex flex-wrap gap-2" role="tablist" aria-label="Filter projects">
