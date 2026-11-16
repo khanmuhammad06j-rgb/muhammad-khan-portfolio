@@ -23,6 +23,8 @@ const securityHeaders = [
   { key: 'Origin-Agent-Cluster', value: '?1' },
   { key: 'X-DNS-Prefetch-Control', value: 'off' },
   { key: 'X-Permitted-Cross-Domain-Policies', value: 'none' },
+  // Turn off the legacy XSS auditor (it can itself be abused); the CSP does this job now
+  { key: 'X-XSS-Protection', value: '0' },
 ];
 
 const nextConfig = {

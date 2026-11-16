@@ -38,7 +38,7 @@ export const config = {
   matcher: [
     {
       // Pages only — skip static assets and files with an extension.
-      source: '/((?!_next/static|_next/image|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|txt|pkt|woff2?)$).*)',
+      source: '/((?!_next/static|_next/image|.*\\.(?:png|jpg|jpeg|gif|webp|avif|svg|ico|txt|pkt|bin|json|xml|webmanifest|woff2?)$).*)',
       missing: [
         { type: 'header', key: 'next-router-prefetch' },
         { type: 'header', key: 'purpose', value: 'prefetch' },

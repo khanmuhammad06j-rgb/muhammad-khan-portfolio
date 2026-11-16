@@ -116,11 +116,14 @@ The site has no forms, database, login, API routes or environment variables, so 
 
 - **Content Security Policy** (`middleware.js`): a fresh nonce on every request, so only the site's own scripts can run; injected scripts (XSS), plugins and iframes are blocked.
 - **Security headers** (`next.config.js`): HSTS (HTTPS only), clickjacking protection (`X-Frame-Options: DENY`, `frame-ancestors 'none'`), no MIME sniffing, strict referrer policy, camera/mic/location and other browser features disabled, cross-origin isolation.
-- **Patched dependencies**: Next.js 15.5.29 and React 19.1.10, with `postcss` and `sharp` pinned to patched versions; `npm audit` reports 0 vulnerabilities. Re-run `npm audit` every few weeks.
+- **Patched dependencies**: Next.js 15.5.29, React 19.1.10 and Three.js 0.187, with `postcss` and `sharp` pinned to patched versions; `npm audit` reports 0 vulnerabilities.
 - **No framework fingerprinting**: `X-Powered-By` header and browser source maps are off.
 - **Spam protection**: the email address is never in the HTML; the browser assembles it.
 - **Privacy**: photo metadata (including GPS) removed; no trackers, analytics or third-party requests.
 - **Responsible disclosure**: `/.well-known/security.txt`.
+- **Privacy & legal page** (`/privacy`): no cookies, analytics, forms or third-party requests; hosting logs, email, rights (GDPR/CCPA), confidentiality, trademarks and open-source credits.
+- **Dependabot** (`.github/dependabot.yml`): weekly patch and minor updates as pull requests.
+- **No secrets**: the site needs no API keys or environment variables. If you ever add one, put it in Vercel → Settings → Environment Variables, never in the code.
 
 DDoS protection and TLS certificates come from wherever the site is hosted.
 
