@@ -13,6 +13,8 @@ module.exports = {
         fg: withVar('fg'),
         muted: withVar('muted'),
         accent: withVar('accent'),
+        // deeper red for filled backgrounds behind white text (WCAG AA 4.5:1)
+        accentfill: withVar('accent-fill'),
         signal: withVar('signal'),
         warn: withVar('warn'),
       },

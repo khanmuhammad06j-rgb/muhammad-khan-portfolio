@@ -31,7 +31,7 @@ export const metrics = [
   { value: '12/12', label: 'capstone validation checks passing at handoff' },
   { value: '99.9%', label: 'uptime on a storefront I ran end to end' },
   { value: '500+', label: 'people a night, 30 nights, 100% safety compliance' },
-  { value: '3.77', label: 'GPA, A.S. Information Technology' },
+  { value: '3.80', label: 'GPA, A.S. Information Technology' },
 ];
 
 // Results ledger: every number comes from my own work, never from the client's operations.
@@ -63,7 +63,7 @@ export const about = {
     { k: 'Fabric', v: 'Spine/leaf · L1–L4' },
     { k: 'Capstone', v: 'Project lead · 7 engineers' },
     { k: 'Next cert', v: 'AWS Solutions Architect' },
-    { k: 'Education', v: 'A.S. IT · GPA 3.77' },
+    { k: 'Education', v: 'A.S. IT · GPA 3.80' },
   ],
 };
 
@@ -232,7 +232,7 @@ export const education = [
   {
     title: 'A.S. Information Technology',
     org: 'Northern Virginia Community College',
-    detail: 'GPA 3.77 / 4.00 · networking & hardware labs',
+    detail: 'GPA 3.80 / 4.00 · networking & hardware labs',
     dates: 'Expected Aug 2027',
   },
   {

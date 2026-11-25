@@ -118,7 +118,7 @@ export default function Projects() {
             aria-selected={filter === f}
             onClick={() => setFilter(f)}
             data-filter={f}
-            className="rounded-[4px] border border-line bg-panel/60 px-3 py-1.5 font-mono text-[11px] font-bold uppercase tracking-wider text-fg/80 transition-all hover:border-accent/60 hover:text-accent aria-selected:border-accent aria-selected:bg-accent aria-selected:text-white aria-selected:shadow-[0_6px_20px_-6px_rgb(var(--accent)/0.8)]"
+            className="rounded-[4px] border border-line bg-panel/60 px-3 py-1.5 font-mono text-[11px] font-bold uppercase tracking-wider text-fg/80 transition-all hover:border-accent/60 hover:text-accent aria-selected:border-accent aria-selected:bg-accentfill aria-selected:text-white aria-selected:shadow-[0_6px_20px_-6px_rgb(var(--accent)/0.8)]"
           >
             {f}
           </button>

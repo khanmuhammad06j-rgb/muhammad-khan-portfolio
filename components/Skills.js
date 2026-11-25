@@ -29,14 +29,14 @@ export default function Skills() {
                 aria-selected={i === active}
                 onClick={() => setActive(i)}
                 data-layer={i}
-                className="group flex items-center justify-between rounded-[4px] border border-line bg-panel/80 px-4 py-3 text-left transition-all duration-300 hover:translate-x-1 hover:border-accent/60 aria-selected:translate-x-2 aria-selected:border-accent aria-selected:bg-accent aria-selected:text-white aria-selected:shadow-[0_10px_30px_-10px_rgb(var(--accent)/0.8)]"
+                className="group flex items-center justify-between rounded-[4px] border border-line bg-panel/80 px-4 py-3 text-left transition-all duration-300 hover:translate-x-1 hover:border-accent/60 aria-selected:translate-x-2 aria-selected:border-accent aria-selected:bg-accentfill aria-selected:text-white aria-selected:shadow-[0_10px_30px_-10px_rgb(var(--accent)/0.8)]"
                 style={{ marginRight: `${(skills.length - 1 - i) * 6}px` }}
               >
                 <span className="flex items-center gap-3">
                   <span className="w-14 font-mono text-[11px] font-bold text-accent group-aria-selected:text-white">{s.layer}</span>
                   <span className="font-display font-bold">{s.name}</span>
                 </span>
-                <span className="font-mono text-[11px] text-muted group-aria-selected:text-white/80">{s.items.length} skills</span>
+                <span className="font-mono text-[11px] text-muted group-aria-selected:text-white">{s.items.length} skills</span>
               </button>
             );
           })}

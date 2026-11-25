@@ -15,7 +15,7 @@ export default function Hero() {
         {/* left: intro */}
         <div className="relative z-10 animate-rise">
           <p className="font-script text-4xl text-fg md:text-5xl">Hello, I’m</p>
-          <h1 className="mt-1 inline-block bg-accent px-4 pb-1 pt-2 font-display text-[2.6rem] font-black uppercase leading-none tracking-[-0.03em] text-white shadow-[6px_6px_0_rgb(var(--fg)/0.9)] sm:text-5xl md:text-6xl lg:text-[2.6rem] xl:text-[3rem]">
+          <h1 className="mt-1 inline-block bg-accentfill px-4 pb-1 pt-2 font-display text-[2.6rem] font-black uppercase leading-none tracking-[-0.03em] text-white shadow-[6px_6px_0_rgb(var(--fg)/0.9)] sm:text-5xl md:text-6xl lg:text-[2.6rem] xl:text-[3rem]">
             {profile.firstName}.
           </h1>
           <div className="mt-6">

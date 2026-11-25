@@ -23,7 +23,7 @@ export default function Nav() {
         data-scrolled={scrolled || open}
         className="mx-auto flex max-w-3xl items-center justify-between gap-2 rounded-full border border-line/70 bg-panel/60 px-2 py-1.5 backdrop-blur-md transition-all duration-300 data-[scrolled=true]:border-line data-[scrolled=true]:bg-panel/90 data-[scrolled=true]:shadow-[0_10px_40px_-12px_rgb(0_0_0/0.6)]"
       >
-        <a href="/#top" className="group flex items-center gap-2 pl-1" aria-label="Back to top">
+        <a href="/#top" className="group flex items-center gap-2 pl-1" aria-label="MK. Back to top">
           <span className="grid h-7 w-7 place-items-center rounded-[5px] bg-accent shadow-[0_0_18px_rgb(var(--accent)/0.6)] transition-transform group-hover:rotate-12">
             <span className="h-2 w-2 rounded-[2px] bg-white" />
           </span>

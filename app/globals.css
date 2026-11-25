@@ -20,6 +20,7 @@
     --fg: 18 16 16;
     --muted: 104 98 96;
     --accent: 225 29 38;
+    --accent-fill: 200 16 26;
     --signal: 22 150 80;
     --warn: 190 120 0;
     color-scheme: light;
@@ -32,6 +33,7 @@
     --fg: 240 238 236;
     --muted: 150 145 142;
     --accent: 255 48 56;
+    --accent-fill: 206 18 28;
     --signal: 74 222 128;
     --warn: 251 191 36;
     color-scheme: dark;
@@ -103,7 +105,7 @@
   }
 
   .btn-primary {
-    @apply btn bg-accent font-mono text-xs font-bold uppercase tracking-wider text-white hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-8px_rgb(var(--accent)/0.8)];
+    @apply btn bg-accentfill font-mono text-xs font-bold uppercase tracking-wider text-white hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-8px_rgb(var(--accent)/0.8)];
   }
 
   .btn-ghost {
